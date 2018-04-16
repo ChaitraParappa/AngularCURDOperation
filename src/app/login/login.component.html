@@ -1,0 +1,26 @@
+<div class="col-md-3 col-md-offset-1">
+  <br /><br /><br />
+  <h2>Details</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>ProductName</td>
+        <td>ProductDescription</td>
+        <td>ProductPrice</td>
+
+        <td colspan="2">Actions</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td><button (click)="Navigate(product)" >Edit</button></td>
+        <td><button (click)="deleteProduct(product.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

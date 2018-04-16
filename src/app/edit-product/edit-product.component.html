@@ -1,0 +1,39 @@
+<div class="col-md-3 col-md-offset-1">
+  <h2>Edit</h2>
+  <div class="panel-body">
+    <form novalidate>
+      <table>
+
+        <tr>
+          <td><label>Product Name</label></td>
+          <td>
+            <input type="text" class="form-control"  [(ngModel)]="coin.name" [ngModelOptions]="{standalone: true}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Product Description</label>
+          </td>
+          <td>
+            <input type="text" class="form-control"  [(ngModel)]="coin.description" [ngModelOptions]="{standalone: true}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Product Price</label>
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="coin.price" [ngModelOptions]="{standalone: true}" />
+          </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+          <td></td>
+          <td>
+            <button (click)="updateProduct()" class="btn btn-primary">Update</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
